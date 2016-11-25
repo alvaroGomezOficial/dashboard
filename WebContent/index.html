@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="appSocial">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>red social</title>
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700i"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body ng-controller="dashboardController">
+		<!-- LISTA DE USUARIOS -->
+		<nav ng-class="{ 'sinMenu': showDiv}" >
+			<ul>
+				<!-- 	//TODO: crearme un componente -->
+				<li id="{{$index}}" ng-click="selectUser(user)"
+					ng-repeat="user in usuarios | orderBy:'name'"><a> <span
+						ng-class="{active: currentUser == user}"> {{user.username}}</span>
+				</a></li>
+			</ul>
+		</nav>
+
+	<section ng-class="{ 'sectionFull': showDiv}" >
+		<header>
+			<div ng-click="showDiv = !showDiv">
+				<img src="images/burguer.png" /> <span>{{currentUser.username}}
+					<img src="images/contact.png" />
+				</span>
+			</div>
+		</header>
+		<!-- 	DASHBOARD	 -->
+		<main>
+			<!-- 1. DATOS PERSONALES DEL USUARIO -->
+			<!-- 		<input type="button"  value="quitar" ng-click="toggleCategories('Leanne Graham', false)" /> -->
+			<!-- 		<input type="button"  value="poner" ng-click="toggleCategories('Leanne Graham', true)" /> -->
+			<personal-data></personal-data>
+			<!-- 2. ALBUMES DEL USUARIO -->
+			<albums-list></albums-list>
+			<!-- 3. POST DEL USUARIO -->
+			<posts-list></posts-list>
+			<!-- 4. CHARTS -->
+			<charts-global></charts-global>
+		</main>
+	</section>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/services/generalResources.js"></script>
+	<script type="text/javascript"
+		src="js/services/userResourcesService.js"></script>
+	<script type="text/javascript"
+		src="js/controller/dashboardController.js"></script>
+	<script type="text/javascript" src="js/directives/selectCategories.js"></script>
+	<script type="text/javascript" src="js/directives/postsList.js"></script>
+	<script type="text/javascript" src="js/directives/personalData.js"></script>
+	<script type="text/javascript" src="js/directives/chartsResult.js"></script>
+	<script type="text/javascript" src="js/directives/chartsGlobal.js"></script>
+	<script type="text/javascript" src="js/directives/albumsList.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	<script type="text/javascript" src="js/exporting.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+</body>
+</html>

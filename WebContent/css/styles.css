@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, figcaption, figure, footer, header, hgroup, menu, nav, section,
+	summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a {
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* GENERAL */
+* {
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+	background: #2A3F54;
+}
+
+nav {
+	color: #ECF0F1;
+	height: 100%;
+	min-height: 100%;
+}
+
+nav li span {
+	display: block;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 12px;
+	padding: 9px;
+}
+
+nav .active {
+	color: #fff !important;
+	background-color: rgba(255, 255, 255, 0.05);
+	text-shadow: 1px 1px #15212d;
+}
+
+header {
+	background: #EDEDED;
+	padding: 20px;
+	border-bottom: 1px solid #D9DEE4;
+	width: calc(100% - 40px);
+}
+
+header img {
+	height: 30px;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+
+header div {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	background: #F7F7F7;
+	text-align: center;
+}
+
+posts-list {
+	overflow: auto;
+}
+
+posts-list, albums-list, personal-data {
+	border: 1px solid #E4E4E4;
+	background: #fff;
+	display: block;
+	padding: 0;
+	width: 100%;
+	height: 200px !important;
+	border-radius: 5px;
+	margin: 20px 0;
+	background: #fff;
+}
+
+charts-global {
+	display: block;
+	margin-top: 20px;
+}
+
+charts-global form {
+	width: 100%;
+}
+
+charts-global charts-result {
+	width: 80%;
+}
+
+posts-list, albums-list, personal-data>* {
+	padding: 20px 20px;
+}
+
+personal-data {
+	font-size: 11px;
+}
+
+personal-data h3 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #15212d;
+	margin-bottom: 20px;
+}
+
+personal-data span {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: #2A3F54;
+	padding-bottom: 10px;
+	display: block;
+	border-bottom: 1px solid #D9DEE4;
+	margin: 10px 50px;
+}
+
+albums-list {
+	overflow: auto;
+}
+
+albums-list li {
+	font-size: 1em;
+	font-weight: 600;
+	color: #2A3F54;
+	padding-bottom: 10px;
+	display: block;
+	border-bottom: 1px solid #D9DEE4;
+	margin: 10px 0;
+	text-align: left;
+}
+
+posts-list {
+	overflow: auto;
+}
+
+posts-list li {
+	font-size: 1em;
+	font-weight: 300;
+	color: #2A3F54;
+	padding-bottom: 10px;
+	display: block;
+	border-bottom: 1px solid #D9DEE4;
+	margin: 10px 0;
+	text-align: left;
+	/*     padding:10px 20px; */
+}
+
+posts-list h3 {
+	font-size: 2em;
+	font-weight: 300;
+	color: #444;
+	margin-bottom: 20px;
+}
+
+posts-list em {
+	font-size: 1em;
+	font-weight: 600;
+	color: #2A3F54;
+	display: block;
+	text-align: right;
+	margin-top: 40px;
+}
+
+charts-global {
+	display: block;
+	margin-top: 20px;
+}
+
+charts-global fieldset {
+	text-align: left;
+}
+
+charts-global label {
+	color: #2A3F54;
+	padding: 10px 0px;
+	margin: 0px;
+	border-bottom: 1px solid #CCC;
+	width: 50%;
+	display: inline-block;
+	font-size: 0.9em;
+}
+
+main * {
+	font-size: 13px;
+}
+
+charts-result {
+	width: 100%;
+	font-size: 18px !important;
+	display: block;
+}
+
+.sinMenu {
+	display: none;
+}
+
+.sectionFull {
+	width: 100%;
+}
+
+header img {
+	cursor: pointer;
+}
+
+/* DESKTOP */
+@media ( min-width :960px) {
+	nav, section {
+		float: left;
+	}
+	nav {
+		width: 20%;
+		height: 100%;
+		min-height: 100%;
+	}
+	section {
+		width: 80%;
+	}
+	main {
+		padding: 20px;
+	}
+	posts-list, albums-list, personal-data {
+		display: inline-block;
+		width: calc(30% - 40px);
+		vertical-align: middle;
+		margin: 0 10px;
+		padding: 10px 20px;
+	}
+	personal-data * {
+		margin: 10px 0;
+	}
+	posts-list, albums-list, personal-data>* {
+		padding: 10px 20px;
+	}
+	posts-list li {
+		font-size: 1em;
+		font-weight: 300;
+		color: #2A3F54;
+		padding-bottom: 10px;
+		display: block;
+		border-bottom: 1px solid #D9DEE4;
+		margin: 10px 0;
+		text-align: left;
+	}
+	charts-global form {
+		width: 20%;
+	}
+	charts-global fieldset {
+		text-align: left;
+	}
+	charts-global label {
+		display: block;
+		color: #2A3F54;
+		padding: 10px 0px;
+		margin: 0px 0;
+		border-bottom: 1px solid #ccc;
+		font-size: 1em;
+		width: initial;
+	}
+	charts-global * {
+		position: relative;
+		display: inline-block;
+	}
+	charts-result {
+		width: 600px;
+		font-size: 18px !important;
+	}
+}

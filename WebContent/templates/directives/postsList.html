@@ -1,0 +1,12 @@
+<article>
+	<ul >
+		<li ng-repeat="post in userPosts">
+			
+			<h3>{{post.title}}</h3>
+			<blockquote>
+				{{post.body}}
+			</blockquote>
+			<em> {{currentUser.name}}</em>
+		</li>
+	</ul>
+</article>
